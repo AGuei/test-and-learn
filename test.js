@@ -22,7 +22,8 @@ for(let i=0; i<5; i++){
         secondOl.appendChild(label);        
         firstLi.appendChild(secondOl);        
     }
-    firstLi.childNodes[0].nodeValue = "add Text " + firstLi.childNodes[0].nodeValue;
+    firstLi.childNodes[0].nodeValue = 'add Text '  + firstLi.childNodes[0].nodeValue;
+    firstLi.childNodes[1].childNodes[0].childNodes[1].childNodes[0].nodeValue += 'xxx';
     firstOl.appendChild(firstLi);
 }
 fragment.appendChild(firstOl);
