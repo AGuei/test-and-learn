@@ -1,0 +1,17 @@
+ol{    
+    counter-reset: step-counter;
+}
+
+ol label li{
+    display: inline;
+    list-style-type: none;
+    counter-increment: step-counter;
+}
+ol label li::before{
+    content: counter(step-counter,upper-alpha) '. ';
+    suffix: '. ';
+}
+
+ol label input{
+    margin-left: -40px;
+}
