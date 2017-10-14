@@ -28,3 +28,8 @@ for(let i=0; i<5; i++){
 }
 fragment.appendChild(firstOl);
 document.body.appendChild(fragment);
+document.body.childNodes[4].addEventListener('click',function(e) {    
+    if (e.target && e.target.type === 'radio' && e.target.nodeName === 'INPUT') {
+        e.target.parentNode.childNodes[1].childNodes[0].nodeValue += 'wrong';
+    }
+}, false);
