@@ -33,5 +33,6 @@ document.body.childNodes[4].addEventListener('click',function(event) {
     let target = e.srcElement ? e.srcElement : e.target;
     if (target && target.type === 'radio' && target.nodeName === 'INPUT') {
         target.parentNode.childNodes[1].childNodes[0].nodeValue += 'wrong';
+        target.disabled = true;
     }
 }, false);
