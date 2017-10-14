@@ -1,18 +1,21 @@
 let fragment = document.createDocumentFragment();
-let firstUl = document.createElement('ol');
+let firstOl = document.createElement('ol');
 for(let i = 0; i < 5; i++){
     let firstLi = document.createElement('li');
     let firstLiText = document.createTextNode('test'+i);
-    let secondUl = document.createElement('ol');
+    let secondOl = document.createElement('ol');
+    secondOl.type = 'A';
     firstLi.appendChild(firstLiText);
     for(let j=5; j<9; j++){
         let secondLi = document.createElement('li');    
         let secondLiText = document.createTextNode('test'+j);
         secondLi.appendChild(secondLiText);
-        secondUl.appendChild(secondLi);
-        firstLi.appendChild(secondUl);
+        secondOl.appendChild(secondLi);
+        secondOl.type = 'A';
+        firstLi.appendChild(secondOl);
+        secondOl.type = 'A';
     }
-    firstUl.appendChild(firstLi);    
+    firstOl.appendChild(firstLi);    
 }
-fragment.appendChild(firstUl);
+fragment.appendChild(firstOl);
 document.body.appendChild(fragment);
